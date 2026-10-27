@@ -1,0 +1,73 @@
+/**
+ * Block editor only: the product input, Amazon search modal and the
+ * settings panels of the Amazon Product Boxes blocks.
+ */
+
+.apb-placeholder .components-placeholder__fieldset { flex-direction: column; align-items: stretch; }
+.apb-placeholder .apb-input { width: 100%; max-width: 640px; }
+
+.apb-input-row { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; }
+.apb-input-row .components-base-control { flex: 1 1 240px; margin: 0; }
+.apb-input-row .components-base-control__field { margin: 0; }
+.apb-input-row .components-button { height: 36px; }
+.apb-input.is-compact .apb-input-row .components-base-control { flex-basis: 100%; }
+.apb-input.is-compact .apb-input-row .components-button { height: 32px; }
+
+.apb-editor-hint { margin: 12px 0 0; color: #757575; font-size: 12px; line-height: 1.5; }
+.apb-editor-notice { margin: 10px 0 0; }
+.apb-editor-notice.components-notice { margin-left: 0; margin-right: 0; }
+
+.apb-asin-line { margin: 0 0 12px; }
+
+.apb-inline-replace,
+.apb-add-more {
+	margin: 12px 0;
+	padding: 14px;
+	border: 1px dashed #c3c4c7;
+	border-radius: 8px;
+	background: #fff;
+}
+
+.apb-add-more .apb-editor-hint { margin-top: 8px; }
+
+.apb-item-actions { display: flex; align-items: center; gap: 2px; margin: 0 0 12px; }
+.apb-item-actions code { margin-right: auto; }
+
+.apb-image-custom { display: grid; gap: 8px; margin: -8px 0 16px; }
+
+/* Search modal */
+.apb-search-modal { width: min(760px, 92vw); }
+.apb-search-form { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.apb-search-form .components-base-control { margin: 0; }
+.apb-search-form .components-base-control:first-child { flex: 1 1 260px; }
+.apb-search-form .components-base-control__field { margin: 0; }
+.apb-search-form .components-button { height: 36px; }
+
+.apb-results { margin: 0; padding: 0; list-style: none; }
+
+.apb-result {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin: 0;
+	padding: 12px 0;
+	border-top: 1px solid #f0f0f0;
+}
+
+.apb-result-image {
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	background: #fff;
+}
+
+.apb-result-image img { max-width: 64px; max-height: 64px; object-fit: contain; }
+.apb-result-text { display: grid; flex: 1; gap: 3px; min-width: 0; }
+.apb-result-text strong { display: -webkit-box; overflow: hidden; font-size: 13px; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.apb-result-meta { color: #757575; font-size: 12px; }
+
+/* The preview is server-drawn; keep its links from looking clickable. */
+.wp-block[data-type^="amazon-product-boxes/"] .apb a { cursor: default; }
